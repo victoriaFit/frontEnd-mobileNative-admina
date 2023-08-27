@@ -20,9 +20,9 @@ function Text(props) {
 function MyTabBar({ state, descriptors, navigation }) {
   const icons = {
     'início': 'https://cdn.discordapp.com/attachments/1059425565330911284/1131682413240668261/home_3.png',
-    'assistência': 'https://cdn.discordapp.com/attachments/1059425565330911284/1133460259608993853/repair-tool.png',
-    'vendas': 'https://cdn.discordapp.com/attachments/1059425565330911284/1133459504109998220/shopping.png',
-    'ajuda': 'https://cdn.discordapp.com/attachments/1059425565330911284/1131660713878900867/help.png'
+    'produtos': 'https://cdn.discordapp.com/attachments/1059425565330911284/1133459504109998220/shopping.png',
+    'serviços': 'https://cdn.discordapp.com/attachments/1091506792900595863/1145491758734647407/history.png',
+    'caixa': 'https://cdn.discordapp.com/attachments/1091506792900595863/1145484460586967151/money.png'
   };
 
   return (
@@ -90,7 +90,7 @@ export default function App() {
             },
           }}
         />
-        <Tab.Screen name="assistência" component={Assistance}
+        <Tab.Screen name="produtos" component={Assistance}
           options={{
             headerStyle: {
               borderBottomWidth: 0,
@@ -101,7 +101,7 @@ export default function App() {
             },
           }}
         />
-        <Tab.Screen name="vendas" component={Pieces}
+        <Tab.Screen name="serviços" component={Pieces}
           options={{
             headerStyle: {
               borderBottomWidth: 0,
@@ -112,7 +112,7 @@ export default function App() {
             },
           }}
         />
-        <Tab.Screen name="ajuda" component={Help}
+        <Tab.Screen name="caixa" component={Help}
           options={{
             headerStyle: {
               borderBottomWidth: 0,
