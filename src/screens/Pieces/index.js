@@ -6,8 +6,8 @@ function Text(props) {
 }
 
 export default function ServicesScreen() {
-    const serviceTypes = ['Manutenção', 'Reparo', 'Venda'];
-    const statuses = ['Aguardando pagamento', 'Pago'];
+    const serviceTypes = ['Manutenção', 'Instalação', 'Consultoria'];
+    const statuses = ['Pendente', 'Em Andamento', 'Concluído'];
     const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
     const services = Array(30).fill().map((_, i) => ({
@@ -58,6 +58,12 @@ export default function ServicesScreen() {
                     <Text style={styles.archiveText}>Serviços Arquivados</Text>
                 </TouchableOpacity>
             </ScrollView>
+            <TouchableOpacity style={styles.addButton}>
+                <Image
+                    source={{ uri: 'https://cdn.discordapp.com/attachments/1091506792900595863/1145535311875682436/add_1.png' }}
+                    style={styles.addIcon}
+                />
+            </TouchableOpacity>
         </View>
     );
 }
@@ -119,5 +125,21 @@ const styles = StyleSheet.create({
         fontFamily: 'Poppins_400Regular',
         fontSize: 14,
         color: 'rgba(0, 0, 0, 0.5)'
+    },
+    addButton: {
+        position: 'absolute',
+        right: 30,
+        bottom: 30,
+        backgroundColor: '#FB5F21',
+        width: 60,
+        height: 60,
+        borderRadius: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 1
+    },
+    addIcon: {
+        width: 30,
+        height: 30
     }
 });
