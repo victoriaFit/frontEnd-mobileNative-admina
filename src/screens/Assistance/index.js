@@ -12,7 +12,7 @@ function Text(props) {
     return <RNText {...props} style={[props.style, {}]} />;
   }
 
-export default function AssistenceScreen() {
+export default function AssistanceScreen() {
     const [serviceType, setServiceType] = useState(null);
     const [hasPreviousOrder, setHasPreviousOrder] = useState(null);
     const [equipment, setEquipment] = useState('');
