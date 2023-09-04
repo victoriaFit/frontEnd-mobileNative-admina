@@ -77,24 +77,18 @@ export default function HomeScreen({ navigation }) {
       <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', backgroundColor: 'white', padding: 28 }}>
         <View style={{ borderWidth: 1, borderColor: 'rgba(0, 0, 0, 0.1)', borderRadius: 12, padding: 20, alignItems: "center" }}>
           <Text style={{ fontSize: 20, marginBottom: 20, fontFamily: 'Poppins_600SemiBold', textAlign: 'center' }}>
-            {greeting()} {name},
+            {greeting()} {name}
           </Text>
-          <Text style={{ marginBottom: 20, fontFamily: 'Poppins_400Regular' }}>Aqui você pode solicitar nossos
-            <Text style={{ fontFamily: "Poppins_600SemiBold", color: '#FB5F21' }}> Serviços de Assistência Técnica</Text> com facilidade e rapidez.
-          </Text>
-          <Image
-            source={{ uri: 'https://cdn.discordapp.com/attachments/1059425565330911284/1133560243306102854/Default_a_person_running_2_125b848e-24ef-4e7c-9343-90168e449d12_0.png' }}
-            style={{ width: 200, height: 300 }}
-          />
+          
           <Text style={{ fontFamily: "Poppins_400Regular" }}>Navegue pelo aplicativo e descubra todas as nossas opções de serviços.</Text>
         </View>
   
   
-        <Text style={{ marginTop: 40, fontSize: 16, fontFamily: "Poppins_600SemiBold" }}>Deseja acessar algum de nossos serviços?</Text>
+        <Text style={{ marginTop: 40, fontSize: 16, fontFamily: "Poppins_600SemiBold" }}>Acesso rápido</Text>
         <View style={{ width: '100%', height: 1, backgroundColor: 'rgba(0, 0, 0, 0.1)', marginVertical: 20 }} />
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('assistência')}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('produtos')}>
           <Image
-            source={{ uri: 'https://cdn.discordapp.com/attachments/1059425565330911284/1133460259608993853/repair-tool.png' }}
+            source={{ uri: 'https://cdn.discordapp.com/attachments/1059425565330911284/1133459504109998220/shopping.png' }}
             style={{ width: 28, height: 28, marginRight: 10 }}
           />
           <View>
@@ -107,9 +101,9 @@ export default function HomeScreen({ navigation }) {
           />
         </TouchableOpacity>
         <View style={{ width: '100%', height: 1, backgroundColor: 'rgba(0, 0, 0, 0.1)', marginVertical: 20 }} />
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('vendas')}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('serviços')}>
           <Image
-            source={{ uri: 'https://cdn.discordapp.com/attachments/1059425565330911284/1133459504109998220/shopping.png' }}
+            source={{ uri: 'https://cdn.discordapp.com/attachments/1091506792900595863/1145491758734647407/history.png' }}
             style={{ width: 28, height: 28, marginRight: 10 }}
           />
           <View>
@@ -122,61 +116,22 @@ export default function HomeScreen({ navigation }) {
           />
         </TouchableOpacity>
         <View style={{ width: '100%', height: 1, backgroundColor: 'rgba(0, 0, 0, 0.1)', marginVertical: 20 }} />
-        <Text style={{ marginTop: 20, fontSize: 16, fontFamily: "Poppins_600SemiBold" }}>Alguma dúvida? Confira nossa FAQ</Text>
-        <View style={{ width: '100%', height: 1, backgroundColor: 'rgba(0, 0, 0, 0.1)', marginVertical: 20 }} />
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ajuda')}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('caixa')}>
           <Image
-            source={{ uri: 'https://cdn.discordapp.com/attachments/1059425565330911284/1131660713878900867/help.png' }}
+            source={{ uri: 'https://cdn.discordapp.com/attachments/1091506792900595863/1145484460586967151/money.png' }}
             style={{ width: 28, height: 28, marginRight: 10 }}
           />
-          <Text style={styles.buttonTitle}>Ajuda</Text>
+          <View>
+            <Text style={styles.buttonTitle}>Caixa</Text>
+            <Text style={styles.buttonText}>Dinheiros</Text>
+          </View>
           <Image
             source={{ uri: 'https://cdn.discordapp.com/attachments/1059425565330911284/1131681200059207740/right-arrow_1.png' }}
             style={{ marginLeft: 'auto', width: 20, height: 20 }}
           />
         </TouchableOpacity>
         <View style={{ width: '100%', height: 1, backgroundColor: 'rgba(0, 0, 0, 0.1)', marginVertical: 20 }} />
-        <Text style={{ marginTop: 20, fontSize: 12, fontFamily: "Poppins_400Regular", color: 'rgba(0, 0, 0, 0.6)', textAlign: 'center', marginBottom: 20 }}>Precisa de um contato mais direto? Preencha com suas informações e entre em contato!</Text>
-        <View style={{ flexDirection: 'row', height: 60, borderColor: 'rgba(0, 0, 0, 0.1)', borderWidth: 1, marginBottom: 20, borderRadius: 12, alignItems: 'center', paddingLeft: 10 }}>
-          <TextInput
-            style={{ flex: 1, fontFamily: 'Poppins_400Regular', fontSize: 16, color: 'black' }}
-            placeholder="Nome"
-            placeholderTextColor="rgba(0, 0, 0, 0.6)"
-            onChangeText={text => setName(text)}
-            value={name}
-          />
-        </View>
-        <View style={{ flexDirection: 'row', height: 60, borderColor: 'rgba(0, 0, 0, 0.1)', borderWidth: 1, marginBottom: 20, borderRadius: 12, alignItems: 'center', paddingLeft: 10 }}>
-          <TextInput
-            style={{ flex: 1, fontFamily: 'Poppins_400Regular', fontSize: 16, color: 'black' }}
-            placeholder="CEP"
-            placeholderTextColor="rgba(0, 0, 0, 0.6)"
-            onChangeText={text => handleCepChange(text)}
-            value={cep}
-            keyboardType="numeric"
-          />
-        </View>
-        <TouchableOpacity
-          style={{
-            flexDirection: 'row',
-            backgroundColor: '#FB5F21',
-            padding: 10,
-            borderRadius: 50,
-            marginTop: 10,
-            width: '80%',
-            alignItems: 'center',
-            justifyContent: 'center',
-            alignSelf: 'center',
-            flexWrap: 'wrap',
-          }}
-          onPress={handleWhatsAppRedirect}
-        >
-          <Image
-            source={{ uri: 'https://cdn.discordapp.com/attachments/1059425565330911284/1131679603073761451/whatsapp.png' }}
-            style={{ width: 24, height: 24, marginRight: 10 }}
-          />
-          <Text style={{ color: 'white', fontSize: 16, fontFamily: "Poppins_400Regular" }}>Converse no WhatsApp</Text>
-        </TouchableOpacity>
+        
       </ScrollView>
     );
   }

@@ -94,14 +94,14 @@ export default function FinanceScreen() {
                             textAlign={'left'}
                         />
                         <View style={styles.buttonsContainer}>
-                            {["C", "±", "%", "/", "7", "8", "9", "*", "4", "5", "6", "+", "1", "2", "3", "-", ",", "0", "D"].map((button, index) => (
+                            {["C", "±", "%", "/", "7", "8", "9", "*", "4", "5", "6", "+", "1", "2", "3", "-", ",", "0", "="].map((button, index) => (
                                 <TouchableOpacity
                                     key={index}
                                     style={[styles.button, button.match(/[0-9,]/) ? styles.numberButton : styles.operatorButton]}
                                     onPress={() => {
                                         if (button === "R") {
                                             setShowCalculator(false);
-                                        } else if (button === "D") {
+                                        } else if (button === "=") {
                                             handleCalculate();
                                         } else {
                                             handlePress(button);
